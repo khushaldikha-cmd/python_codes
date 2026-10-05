@@ -1,6 +1,8 @@
+# import os
+# os.system("cls")
 print("Starting... - Flat Tables Codes Added [Version 39] -- New Process in Every Loop - Scheduler Auto refresh code in every iteration")
 while(True) : 
-    print("Auto refreshing code in every iteration")
+    print("Auto refreshing code in every iteration - as well as clearing terminal at 5 PM")
     import os
     import time
     from datetime import datetime, timedelta
@@ -10,6 +12,18 @@ while(True) :
     ms_dir = "C:/Users/khushaldikha/Documents/Python_Codes/Master_Scheduler"
     print("Current Hour is {} , Current Date is {}".format(hh,dd))
 
+    if( hh==17 ) | ( hh==12 ) :
+        import os
+        os.system("cls")
+        print("Auto refreshing code in every iteration - as well as clearing terminal at 5 PM")        
+
+        os.chdir(ms_dir)
+        file = "../0009_New_Lead_Assigment_Automation/0017_Mid_Market_New_Logins.py"
+        print("running {}".format(file))
+        os.system("python {}".format(file))
+        time.sleep(5)  # Pause execution for 5 seconds
+
+    
     if (hh == 14) :
         print("Starting... Updating few columns in Flat Table ")
         ms_dir = "C:/Users/khushaldikha/Documents/Python_Codes/Master_Scheduler"
